@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="canonical" href="https://voyage-photo-cambodge.vercel.app/">
+<link rel="icon" href="/images/favicon.png" type="images/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voyage Photo Cambodge 2026 - Expédition de 12 Jours avec Laurent Dambies | Capturez les merveilles antiques, le peuple et la culture du Cambodge</title>
+    <meta name="description" content="Rejoignez un circuit photographique exclusif de 12 jours avec Laurent Dambies à travers les lieux les plus spectaculaires du Cambodge. D'Angkor Wat aux marchés vibrants, capturez l'âme de ce magnifique royaume avec les conseils d'un photographe professionnel." />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles & Variables */
+        :root {
+            --primary: #e16d24;
+            --light-accent: #f18c4e;
+            --dark-text: #333;
+            --light-bg: rgba(255, 255, 255, 0.85);
+            --glass-bg: rgba(255, 255, 255, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #fdfcfb 0%, #f5f7fa 100%);
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(225, 109, 36, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--light-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(225, 109, 36, 0.4);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/cambodia_photo_tour_bayon_temple.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 90%;
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .hero-subtitle span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-subtitle i {
+            margin-right: 8px;
+            color: var(--light-accent);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-content b {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Slideshow Section */
+        .slideshow {
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            padding: 60px 0;
+        }
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .mySlides {
+            display: none;
+            height: 500px;
+        }
+        
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        
+        .dots {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+        }
+        
+        .active-dot {
+            background-color: var(--primary);
+        }
+        
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: #000000;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: var(--shadow);
+        }
+        
+        .price-tag {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .price-features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .price-feature {
+            text-align: center;
+        }
+        
+        .price-feature i {
+            font-size: 2rem;
+            color: var(--light-accent);
+            margin-bottom: 10px;
+        }
+        
+        .price-feature div {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .price-note {
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Icons Section */
+        .features {
+            background: white;
+        }
+        
+        .features-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .feature-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            background: rgba(225, 109, 36, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        
+        .feature-item h3 {
+            color: var(--dark-text);
+            margin-bottom: 15px;
+        }
+        
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Map & Contact Section */
+        .contact {
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: none;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .address {
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-detail i {
+            width: 30px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: var(--light-accent);
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-content {
+                padding: 30px 20px;
+            }
+            
+            .mySlides {
+                height: 300px;
+            }
+            
+            .price-tag {
+                font-size: 3rem;
+            }
+            
+            .price-features {
+                gap: 15px;
+            }
+            
+            .feature-item {
+                padding: 20px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .price-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Circuit Photo Cambodge 2026</h1>
+            <div class="hero-subtitle">
+                <span><i class="fas fa-calendar-days"></i> 12 Jours • 13-24 Mars 2026 & 17-28 Août 2026</span>
+                <span><i class="fas fa-map-marker-alt"></i> 6 Destinations</span>
+                <span><i class="fas fa-users"></i> Max 4 Photographes</span>
+            </div>
+            <a href="https://www.angkorphotographytours.com/cambodia-photography-tour/" target="_blank" class="btn">Réservez Votre Circuit</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title"><strong>Capturez le Cambodge à Travers Votre Objectif</strong></h2>
+            <div class="about-content">
+                <p>Le Cambodge offre des <strong>opportunités photographiques exceptionnelles</strong> qui vont bien au-delà du célèbre <strong>complexe des temples d'Angkor</strong>, présentant des expériences variées pour les <strong>photographes de temples</strong> passionnés et les <strong>amateurs de photographie de rue</strong> à la recherche de rencontres culturelles authentiques.</p>
+                
+                <h3><strong>Les Magnifiques Temples d'Angkor</strong></h3>
+                <p>Les temples légendaires d'Angkor continuent d'attirer des photographes du monde entier, et pour d'excellentes raisons. <strong>Siem Reap</strong> sert de portail vers cette extraordinaire collection d'<strong>architecture sacrée</strong> couvrant sept siècles (du 7ème au 14ème), offrant un matériel photographique abondant pour réaliser les rêves de tout photographe de temples. Les nouveaux venus sont constamment émerveillés par l'<strong>immensité du site</strong> et les <strong>possibilités créatives</strong> illimitées qu'il offre.</p>
+                
+                <p>Maîtriser la <strong>photographie de temple</strong> nécessite de la <strong>persévérance, de l'endurance et une réflexion stratégique sur la dynamique de la lumière</strong>. Les mois de mousson d'<strong>août à novembre</strong> offrent des récompenses exceptionnelles, car de nombreuses structures se parent d'une <strong>mousse</strong> luxuriante qui ajoute une texture visuelle remarquable à vos clichés. Pendant les périodes pluvieuses, les photographes peuvent obtenir des <strong>reflets de temples spectaculaires dans les bassins d'eau</strong>, produisant une <strong>imagerie en miroir</strong> fascinante qui transforme des vues reconnaissables en compositions enchanteresses.</p>
+                
+                <h3><strong>Photographie de Rue et Portrait</strong></h3>
+                <p>Bien que la photographie de temples attire les foules, les <strong>véritables joyaux photographiques</strong> du Cambodge existent au sein de ses <strong>rythmes quotidiens et de ses habitants</strong>. Avec plus de 70 % des citoyens résidant toujours dans des <strong>communautés rurales</strong> en 2025, la nation offre des chances infinies pour une <strong>narration authentique à travers la photographie</strong>.</p>
+                
+                <p>Les <strong>communautés villageoises</strong> offrent des aperçus intimes de l'<strong>existence cambodgienne traditionnelle</strong>, où les habitations en bois reposent paisiblement au milieu de <strong>rizières</strong> luxuriantes. Les <strong>marchés communautaires</strong> regorgent de potentiel visuel — des arrangements colorés de produits tropicaux et de produits de la ferme aux interactions animées entre vendeurs et acheteurs. Les Cambodgiens accueillent généralement les photographes avec une <strong>hospitalité authentique</strong>, consentant souvent aux portraits lorsqu'ils sont approchés avec courtoisie.</p>
+                
+                <p>Les <strong>moines bouddhistes</strong> offrent des sujets particulièrement captivants pour ceux qui documentent le <strong>patrimoine religieux</strong> du Cambodge. Au lieu d'organiser des photos dans les temples historiques, les photographes découvrent des <strong>moments organiques</strong> dans les pagodes et monastères contemporains, où de <strong>jeunes moines vêtus de robes safran vibrantes</strong> mènent leurs activités quotidiennes. Ces instants spontanés — qu'il s'agisse d'apprendre des langues, d'entretenir les installations du temple ou de participer aux dévotions du soir — capturent le cœur de la <strong>culture bouddhiste du Cambodge</strong> à travers des moments brefs et authentiques.</p>
+                
+                <p>Les destinations les plus épanouissantes pour la <strong>photographie humaine</strong> et la <strong>photographie de rue</strong> englobent les marchés communautaires actifs, les établissements entourant le <strong>lac Tonlé Sap</strong> et les <strong>villes rurales</strong> à travers les provinces. Pendant la saison verdoyante d'août, les photographes peuvent observer la <strong>plantation manuelle traditionnelle du riz</strong>, une coutume qui persiste dans certaines régions et offre des vues distinctives sur les <strong>traditions agricoles du Cambodge</strong>.</p>
+                
+                <p>La <strong>richesse visuelle</strong> du Cambodge n'existe pas seulement dans ses <strong>monuments historiques</strong>, mais dans la <strong>culture vibrante qui s'épanouit à leurs côtés</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slideshow">
+        <div class="container">
+            <h2 class="section-title">Le Cambodge en Images</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/cambodia_photo-tour_temples_1.jpg" alt="Temple du Cambodge 1">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="images/cambodia_photo-tour_temples_2.jpg" alt="Temple du Cambodge 2">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="images/cambodia_photo-tour_temples_3.jpg" alt="Temple du Cambodge 3">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="images/cambodia_photo-tour_temples_4.jpg" alt="Temple du Cambodge 4">
+                </div>
+            </div>
+            <br>
+            
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Prêt à Capturer le Cambodge ?</h2>
+            <div class="pricing-content">
+                <p>Seulement 4 places disponibles pour cette expédition photographique exclusive. Sécurisez votre place et transformez votre photographie de voyage pour toujours.</p>
+                
+                <div class="price-tag">4050 EUR</div>
+                
+                <div class="price-features">
+                    <div class="price-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Tout inclus</div>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-calendar"></i>
+                        <div>12 Jours</div>
+                    </div>
+                    <div class="price-feature">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>6 Destinations</div>
+                    </div>
+                </div>
+                
+                <a href="https://www.angkorphotographytours.com/cambodia-photography-tour/" target="_blank" class="btn">Réservez Votre Aventure</a>
+                
+                <p class="price-note">Acompte de 30% pour sécuriser votre place • Remboursement intégral si annulé 3 mois avant le départ</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Pourquoi ce Circuit Photo au Cambodge est Différent</h2>
+            <p class="features-subtitle">Plus que du simple tourisme — c'est un atelier de photographie complet conçu pour élever vos compétences tout en explorant les joyaux cachés du Cambodge.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-monument"></i>
+                    </div>
+                    <h3>Temples Iconiques</h3>
+                    <p>Capturez le magnifique Angkor Wat au lever du soleil et explorez des temples cachés</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <h3>Culture Locale</h3>
+                    <p>Photographiez des marchés vibrants, des villages traditionnels et la vie Khmère authentique</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>La Magie de l'Heure Dorée</h3>
+                    <p>Un timing parfait pour un éclairage magique sur les lieux les plus photogéniques du Cambodge</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Conseils d'Experts</h3>
+                    <p>Guide photographe professionnel avec plus de 12 ans d'expérience au Cambodge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Trouvez-nous</h2>
+            
+            <div class="contact-container">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.9066280562024!2d103.84021737321761!3d13.356081706336065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3110174364e25ba9%3A0xd9b10c9fcba0b10a!2sAngkor+Photography+Tours!5e0!3m2!1sen!2skh!4v1756716116244!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Informations de Contact</h3>
+                    
+                    <div class="address">
+                        <h4>Angkor Photography Tours</h4>
+                        <p>Sok San Road, Sangkat Svay Dangkum<br>
+                        District de Siem Reap, Province de Siem Reap 17252<br>
+                        Cambodge</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>laurent.dambies@angkorphotographytours.com</span>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+855(0) 15 720 655</span>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp Disponible</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/angkorphotographytours" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/angkorphototours" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Angkor Photography Tours. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            
+            slideIndex++;
+            
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active-dot";
+            
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+        
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+        
+        // Scroll animation for feature items
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureItems = document.querySelectorAll('.feature-item');
+            
+            function checkVisibility() {
+                featureItems.forEach(item => {
+                    const position = item.getBoundingClientRect();
+                    
+                    // Checking if the element is in viewport
+                    if(position.top < window.innerHeight && position.bottom >= 0) {
+                        item.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Check on initial load
+            checkVisibility();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkVisibility);
+        });
+    </script>
+</body>
+
+</html>
